@@ -8,11 +8,14 @@ public class App
 {
     public static void main(String[] args) {
         FestivalGate gate = new FestivalGate();
+        gate.setNumberOfAttendees(100);
 
-        for (int i = 0; i <= 10; i++) {
+        FestivalStatisticsThread statsThread = new FestivalStatisticsThread(gate);
+        statsThread.start();
+
+        for (int i = 0; i < gate.getNumberOfAttendees(); i++) {
             gate.receiveAttendee();
         }
 
-        System.out.println(gate.getTickets());
     }
 }

@@ -15,6 +15,11 @@ public class FestivalAttendeeThread extends Thread {
 	@Override
 	public void run() {
 		gate.addTicket(ticketType);
+		try {
+			sleep(200);
+		} catch (InterruptedException e) {
+			throw new RuntimeException(e);
+		}
 	}
 
 }
