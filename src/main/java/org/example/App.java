@@ -13,7 +13,7 @@ public class App
         FestivalStatisticsThread statsThread = new FestivalStatisticsThread(gate);
         statsThread.start();
 
-        for (int i = 0; i < gate.getNumberOfAttendees(); i++) {
+		for (int i = 0; i < gate.getNumberOfAttendees(); i++) {
             gate.receiveAttendee();
         }
 

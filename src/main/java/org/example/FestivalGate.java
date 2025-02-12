@@ -35,6 +35,5 @@ public class FestivalGate {
 		} else {
 			ticketCounts.put(ticketType, 1);
 		}
-//		System.out.println("Ticket validated: " + ticketType);
 	}
 }
